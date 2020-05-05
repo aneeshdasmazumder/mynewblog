@@ -1,0 +1,41 @@
+.wprm-toggle-container {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid #333333;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    a.wprm-toggle {
+        display: inline-block;
+        padding: 5px 10px;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &.wprm-toggle-active {
+            .wprm-toggle-icon-inactive {
+                display: none;
+            }
+        }
+
+        &:not(.wprm-toggle-active) {
+            background: none !important;
+            color: inherit !important;
+
+            .wprm-toggle-icon-active {
+                display: none;
+            }
+        }
+
+        .wprm-toggle-icon {
+            margin: 0;
+
+            svg {
+                margin-top: -0.3em;
+            }
+
+            & + .wprm-toggle-text {
+                margin-left: 10px;
+            }
+        }
+    }
+}
